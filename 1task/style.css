@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.main {
+    height: 10000px;
+    width: 100vw;
+    background-color: #D5C9BE;
+}
+
+.progress-bar {
+    height: 15px;
+    width: 100%;
+    position: fixed;
+}
+
+.progress {
+    height: 100%;
+    width: 10%;
+    background-color: #f00;
+}
