@@ -2,6 +2,7 @@
 
 const maxHeight = 10000;
 const progress = document.getElementById("progress");
+let prevHeight = 0;
 
 function getMaxHeight () {
     return maxHeight - window.innerHeight;
@@ -9,7 +10,10 @@ function getMaxHeight () {
 
 function progressRender () {
     currentHeight = scrollY;
-    progress.style.width = `${(currentHeight/getMaxHeight()) * 100}%`;
+    if (currentHeight > prevHeight) {
+        progress.style.width = `${(currentHeight / getMaxHeight()) * 100}%`;
+        prevHeight = currentHeight;
+    }
 }
 
 window.addEventListener('scroll', progressRender);
