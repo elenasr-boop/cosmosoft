@@ -20,4 +20,5 @@
     height: 100%;
     width: 0%;
     background-color: #f00;
+    transition: all ease-out .3s;
 }
