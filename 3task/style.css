@@ -14,7 +14,7 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -59,6 +59,10 @@
     font-size: 1.25rem;
 }
 
+.save-button:disabled {
+    background-color: #a9a9a9;
+}
+
 .cards {
     overflow-y: scroll;
     display: flex;
@@ -77,14 +81,31 @@
     padding: 2rem;
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
     font-size: 1.25rem;
+    position: relative;
 }
 
 .card_img {
     width: 150px;
     height: 150px;
     border-radius: 75px;
+    object-fit: cover;
+    position: sticky;
+    top: calc(50% - 75px);
 }
 
-/* faebd7 */
+.card_desc {
+    max-width: calc(100% - 2rem - 150px);
+    word-wrap: break-word;
+}
+
+.delete-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #8b4513;
+    background-color: #fff;
+    padding: 0.25rem;
+    border-radius: 7px;
+}
