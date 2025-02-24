@@ -57,12 +57,14 @@ saveButton.addEventListener("click", (event) => {
             // Очищение полей
             descInput.value = "";
             imageInput.value = "";
+            saveButton.disabled = true;
         };
         reader.readAsDataURL(file);
     } else {
         createCard(safeString(text), null);
         descInput.value = "";
         imageInput.value = "";
+        saveButton.disabled = true;
     }
 });
 
