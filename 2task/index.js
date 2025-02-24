@@ -33,7 +33,7 @@ async function savePhrase(index, phrase) {
                 const fileContent = fs.readFileSync(filePath, 'utf8');
                 const parsedData = JSON.parse(fileContent);
                 if (Array.isArray(parsedData)) {
-                    phrasesArray = parsedData; // Если это массив, используем его
+                    phrasesArray = parsedData;
                 } else {
                     console.warn(`Файл ${filePath} не содержит массив, перезаписываем.`);
                 }
